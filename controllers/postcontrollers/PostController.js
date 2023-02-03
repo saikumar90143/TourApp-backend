@@ -48,7 +48,7 @@ const GetTours=async(req,res)=>{
      const {page}=req.query
      console.log('page: ', page);
     try {
-        const limit=2
+        const limit=6
         const startIndex=(Number(page)-1) *limit
         const total=await Postmodel.countDocuments()
         const tours=await Postmodel.find().limit(limit).skip(startIndex)
